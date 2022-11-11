@@ -41,8 +41,9 @@ def create_bar_chart(y_axis, x_axis, title, x_label, y_label):
     plt.title(title)
     plt.xlabel(x_label)
     plt.ylabel(y_label)
+    plt.savefig("bar_chart.png")
     plt.show()
-    plt.savefig("bar_chart.pdf")
+    
 create_bar_chart(y_axis, x_axis, title, x_label, y_label)
    
 #Here i give a digrammatic representation using Pie Chart
@@ -55,12 +56,13 @@ title = ('WHO Region')
 def create_pie_chart(countries,explodes, label):
     plt.pie(countries,labels=label, explode=explodes, autopct='%.1f%%', shadow=True)
     plt.title('WHO Regions')
-    plt.show()
     plt.savefig("pie_chart.png")
+    plt.show()
+    
 
 create_pie_chart(countries,explodes,label)
 
 #Line plot 
 #This line plot shows the amount of TotalDeaths and ActiveCases for the entire WHO Regions
 groups.plot()
-
+plt.savefig("groups.png")
