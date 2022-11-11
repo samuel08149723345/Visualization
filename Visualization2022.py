@@ -9,8 +9,8 @@ Data_Covid = pd.read_csv(r'C:\Users\Samuel Okachi\Documents Covid 19 Data.csv')
 Data_Covid
 
 #Define a function for our data
-#This dataframe contains the grouped countries in the WHO regions in the world
-#Here each countries are grouped under specified headers according to the Covid-19 cases
+# My dataframe contains the grouped countries in the WHO regions in the world
+# Here each countries are grouped under specified headers according to the Covid-19 cases
 def retrieve_data(url):
     data = pd.read_csv(url)
     return data
@@ -18,7 +18,7 @@ df_world = retrieve_data("worldometer_data.csv")
 Data_covid = retrieve_data("Covid 19 Data.csv")
 print(df_world)
 
-#This Dataframe contains data that were recorded each day since the beginning of the covid-19 pandemic
+# My Dataframe contains data that were recorded each day since the beginning of the covid-19 pandemic
 # The recorded are based on days of each month
 # Data are grouped in terms of Confirmed Cases, Recovered, Active,New cases and New deahts
 df_day = pd.read_csv("day_wise.csv")
@@ -34,7 +34,7 @@ title = "Covid-19 Active Cases "
 x_label = "Health Regions"
 y_label = "Active Cases"
 
-#Here we plot our Bar_chart 
+#Here i plot our Bar_chart 
 def create_bar_chart(y_axis, x_axis, title, x_label, y_label):
     plt.figure(figsize =(15,15))
     plt.bar(y_axis,x_axis,color="g")
@@ -45,7 +45,7 @@ def create_bar_chart(y_axis, x_axis, title, x_label, y_label):
     plt.savefig("bar_chart.pdf")
 create_bar_chart(y_axis, x_axis, title, x_label, y_label)
    
-# Here we give a digrammatic representation using Pie Chart
+# Here i give a digrammatic representation using Pie Chart
 # Define a Function 
 label = ['Europe','Africa','Americas', 'Eastern Mediterranean', 'Western Pacific', 'South-EastAsia']
 countries = [55,47,35,22,15,10]
