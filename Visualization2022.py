@@ -9,8 +9,8 @@ Data_Covid = pd.read_csv(r'C:\Users\Samuel Okachi\Documents Covid 19 Data.csv')
 Data_Covid
 
 #Define a function for our data
-# My dataframe contains the grouped countries in the WHO regions in the world
-# Here each countries are grouped under specified headers according to the Covid-19 cases
+#My dataframe contains the grouped countries in the WHO regions in the world
+#Here each countries are grouped under specified headers according to the Covid-19 cases
 def retrieve_data(url):
     data = pd.read_csv(url)
     return data
@@ -18,9 +18,9 @@ df_world = retrieve_data("worldometer_data.csv")
 Data_covid = retrieve_data("Covid 19 Data.csv")
 print(df_world)
 
-# My Dataframe contains data that were recorded each day since the beginning of the covid-19 pandemic
-# The recorded are based on days of each month
-# Data are grouped in terms of Confirmed Cases, Recovered, Active,New cases and New deahts
+#My Dataframe contains data that were recorded each day since the beginning of the covid-19 pandemic
+#The recorded are based on days of each month
+#Data are grouped in terms of Confirmed Cases, Recovered, Active,New cases and New deahts
 df_day = pd.read_csv("day_wise.csv")
 print(df_day)
 
@@ -45,8 +45,8 @@ def create_bar_chart(y_axis, x_axis, title, x_label, y_label):
     plt.savefig("bar_chart.pdf")
 create_bar_chart(y_axis, x_axis, title, x_label, y_label)
    
-# Here i give a digrammatic representation using Pie Chart
-# Define a Function 
+#Here i give a digrammatic representation using Pie Chart
+#Define a Function 
 label = ['Europe','Africa','Americas', 'Eastern Mediterranean', 'Western Pacific', 'South-EastAsia']
 countries = [55,47,35,22,15,10]
 explodes = [0.1, 0, 0, 0, 0, 0,]
